@@ -1,25 +1,152 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body {
+/*	margin: 0px; */
+	font-family: 'Open Sans', sans-serif;
+}
+
+#content {
+	max-width: 880px;	/* this is just used to define a max width of the content, can be removed to optimize the page also for big screen. In this cast it is just done this way to meet the required layout */
+}
+
 header {
 	background-color: #EDEDED;
-	padding: 5px;
-	margin: auto;
+	padding: 10px;
+	font-weight: bold;
+/*	overflow: auto;  --- this was used for the floating logo, using now display:flex; instead */
+	display: flex;
+	align-items: center;
+}
+
+
+
+#header_logo {
+	margin-left: -30px;  /* This marging is just becaue the picture has empty pixels on the left. I usually would edit the image instead of adding a margin!!! */
+/*	float: left;	--- using display: flex; now for logo and text positioning */
 }
 
 nav {
 	background-color: #653D3D;
-	color: white;
 }
 
+.main_nav {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.main_nav li {
+	display: inline-flex;  /* to display the navigation horizontal */
+}
+
+.main_nav li a {
+	color: white;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bold;
+	padding: 10px;
+}
+
+a.active {
+	color: white;
+	text-decoration: none;
+}
+
+
+nav ul li a:hover:not(.active) {
+	background-color: #9AC2C2;
+}
+
+main {
+	font-size: 78px;
+	font-weight: bold;
+	padding: 40px;
+	text-align: center;
+}
 .posts_hl {
 	background-color: #978484;
 	color: white;
+	padding: 10px;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 18px;
 }
+
+#posts {
+/*	display: grid;
+	grid-template-columns: auto auto;
+	grid-gap: 0px;		--- tried first to do the 2 x 2 with grid, but for me it works better with flex in this case  */
+	padding-top: 20px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+#posts div {
+	margin-bottom: 50px;
+}
+
+#posts figure {
+	margin: 0px;
+	width: 360px;
+
+}
+#posts img {
+	width: 360px;
+	height: 193px;
+}
+
 
 hr {
 	background-color: #978484;
 	height: 5px;
-
+	margin-top: 60px;
 }
 
 footer {
 	text-align: center;
+	margin-top: 15px;
+}
+
+@media screen and (max-width: 752px) {
+	body {
+		margin: 0px;
+	}
+
+	#posts figure {
+	width: 100%;
+
+	}
+	#posts img {
+	width: 100%;
+	height: 100%;
+	}
+}
+
+@media screen and (max-width: 620px) {
+	main {
+		font-size: 55px;
+		padding: 20px;
+	}
+}
+
+@media screen and (max-width: 425px) {
+	main {
+		font-size: 45px;
+	}
+}
+
+@media screen and (max-width: 359px) {   /* if your have less than 360px resolution, you will just get an empty page, this page is designed for at least 360px :) */
+	body {
+		display:none;
+	}
+}
+
+@media print {   /* this page is not designed to be printed :) */
+	body {
+		display:none;
+	}
 }
