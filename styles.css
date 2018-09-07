@@ -64,6 +64,12 @@ main {
 	text-align: center;
 }
 
+figcaption {
+	font-size: 18px;
+	word-break: break-word;		/*to break the words, works so far only for setpoints, which i set manually with $shy; */
+
+}
+
 main h1 {
 	font-size: 22px;
 	font-weight: bold;
