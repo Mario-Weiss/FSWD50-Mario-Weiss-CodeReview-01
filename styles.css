@@ -1,0 +1,25 @@
+header {
+	background-color: #EDEDED;
+	padding: 5px;
+	margin: auto;
+}
+
+nav {
+	background-color: #653D3D;
+	color: white;
+}
+
+.posts_hl {
+	background-color: #978484;
+	color: white;
+}
+
+hr {
+	background-color: #978484;
+	height: 5px;
+
+}
+
+footer {
+	text-align: center;
+}
