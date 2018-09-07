@@ -115,6 +115,10 @@ div.about_me {
 	overflow: auto;		/* !!! important if floating image is smaller than text */
 }
 
+.about_me2 p {
+	text-align: left;
+}
+
 .about_text {
 	text-align: center;
 	position: absolute;
