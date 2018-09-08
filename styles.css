@@ -3,11 +3,12 @@
 body {
 /*	margin: 0px; */
 	font-family: 'Open Sans', sans-serif;
+
 }
 
 #content {
 	max-width: 880px;	/* this is just used to define a max width of the content, can be removed to optimize the page also for big screen. In this cast it is just done this way to meet the required layout */
-}
+	margin:auto;}
 
 header {
 	background-color: #EDEDED;
@@ -69,7 +70,7 @@ main {
 figcaption {
 	font-size: 18px;
 	word-break: break-word;		/*to break the words, works so far only for setpoints, which i set manually with $shy; */
-
+/*	hyphens: auto;		---does not work on chrome & windows */
 }
 
 main h1 {
